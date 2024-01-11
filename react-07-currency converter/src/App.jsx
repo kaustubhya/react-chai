@@ -1,10 +1,11 @@
 import { useState } from 'react'
-
+import InputBox from './components/InputBox'
 
 function App() {
   // const [count, setCount] = useState(0)
 // hook is a method in itself, count is a variable and setCount is a function
 
+<InputBox />
 
   return (
     <>
