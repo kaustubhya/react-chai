@@ -1,7 +1,7 @@
 // making components reusable now
 // InputBox.jsx is the input box component in the Ui
 
-import React from 'react'
+import React, {useId}  from 'react'
 
 function InputBox({
   // the following are the values that we will expect from the users
@@ -17,15 +17,23 @@ function InputBox({
   // default className is empty
 }) {
 
+  const amountInputId = useId()
+
 return (
   <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
     {/* here we wrote the special css {``} because we are giving user an option to give their own css via javascript variable "className"*/}
       <div className="w-1/2">
-          <label  className="text-black/40 mb-2 inline-block">
+          <label htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">
               {label}
                {/* wrapping label and taking from JS */}
+               {/* To optimise this, we can use a useId react hook. See above binding with label and below binding with input */}
           </label>
+
           <input
+              id={amountInputId} // useId hook binding with input
+
+              // DONOT USE USEID TO GENERATE KEYS IN LOOPS
+
               
               className="outline-none w-full bg-transparent py-1.5"
               type="number"
