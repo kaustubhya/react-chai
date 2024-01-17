@@ -1,14 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './index.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-     <h1 className='bg-[#FF0028]'>React Router Video mein aapka swagat hai</h1>
     </>
   )
 }
