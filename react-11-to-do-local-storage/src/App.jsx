@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import {TodoProvider} from './contexts/'
 import './App.css'
+import Form from './components/Form'
+import  FormItem  from './components/FormItem'
 
 
 // 1. Go To TodoContext.js
@@ -18,7 +20,7 @@ function App() {
 
   // Let us define functionalities now
   const addTodo = (todo) => {
-    // bow this todo inside () is a string that we got from the form 
+    // here this todo inside () is a string that we got from the form 
 
     // 🛑🛑🛑🛑🛑 Now if we do: setTodos(todo), this will overwrite all of our previous Todos and give our a new current todo
 
@@ -74,7 +76,7 @@ function App() {
   // 🛑🛑🛑🛑 Toggle Checkmark
 
   const toggleComplete = (id) => {
-    setTodos((prev) => prev.map((prevTodo) => prevTodo === id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo))
+    setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo))
 
     /* 
       Here it works as follows, 
@@ -92,6 +94,8 @@ function App() {
             todo: " Todo msg",
             completed: false,
         }
+
+        (We used this ...todo to pass all elements in Add Todo also, see up ↑)
 
       2.  Now after passing all elements of prevTodo, we take the completed attribute and set up it as a reverse toggle i.e. if the default value is false, make it true and vice versa (completed: !prevTodo.completed => reverse Toggle Switch) 
     ]
@@ -136,7 +140,7 @@ function App() {
     // No need to store it in a variable here
   }, [todos])
 
-  // 4. You can go to Form.jsx and FormItem.jsx now, do basic rfce in both, then go to index.js and import and export both there 
+  // 4. You can go to Form.jsx and FormItem.jsx now, do basic rfce in both, then go to index.js of components, and import and export both there 
 
   
   
@@ -149,9 +153,30 @@ function App() {
                     <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
                     <div className="mb-4">
                         {/* Todo form goes here */} 
+                        <Form />
+                        
                     </div>
                     <div className="flex flex-wrap gap-y-3">
                         {/*Loop and Add TodoItem here */}
+
+                        {/* {} means return using 'return' keyword */}
+                        {/* () means auto return, no return keyword needed */}
+                        {todos.map ((todo) => (
+                          <div key={todo.id}
+                          className='w-full'
+                          >
+                          <FormItem todo={todo} />
+                          {/* Here I got an error, I mis-spelled the component */}
+                          </div>
+
+                          // Here we are looping and adding various divs, each having a unique todo (distinguished by their IDs)
+
+                          // Since this is an Array, we could have also used indexes of arrays for uniqueness, NOOOOOOO. As we know if we delete an item from an array, the array index changes as the array adjusts itself back. 
+                          // But for IDs, if we delete an ID, the other IDs will remain the same. This makes using IDs as keys better than using indexes.
+
+                          // Also we passed keys as props here (sometimes passing props in context API is ok, it is not considered a crime)
+
+                        ))}
                     </div>
                 </div>
             </div>
@@ -160,3 +185,7 @@ function App() {
 }
 
 export default App
+
+// Run the App finally, debug the errors. 
+// Also to check with local storage, do: Right Click -> Inspect -> Applications on top right (>> click this) -> Local Storage on left panel -> Local host
+// Enter some values, refresh it, you will be able to see those values being updated in local storage and it will remain there
