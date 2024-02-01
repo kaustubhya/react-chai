@@ -5,10 +5,10 @@ import {configureStore} from '@reduxjs/toolkit';
 // 2. Store is now done but it is not ready yet for use-case, so using this method, let us export a variable.
 
 // **************** importing reducers list
-import todoReducer from "./features/todo/todoSlice";
+import todoReducer from "../features/todo/todoSlice";
 // *************** Now add the following keys in the configure store object 
 
-export const store = configureStore({
+export const store = configureStore({ // We export this store to main.jsx for wrapping
     reducer: todoReducer
 
     // 5. Go to components, addtodo.jsx and todo.jsx and do rfce on both

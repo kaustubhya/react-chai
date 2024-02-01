@@ -1,9 +1,9 @@
-// Reducers are also called Slices in Redux Toolkit.
+// Features are also called Slices in Redux Toolkit.
 // Hence we give it the name, todoSlice.js. By giving this name, we tell or let the people know that we are using redux toolkit.
 
 // There can be many types of features like Login Feature, Product Feature, todoFeature etc.
 
-// Methods to create slice
+// Methods to create Slices:
 // There are 2 methods but we will only need one
 
 import { createSlice, nanoid } from "@reduxjs/toolkit";
@@ -47,7 +47,7 @@ export const todoSlice = createSlice({
         // Here we will initialize as well as write it
 
         // 🛑🛑🛑🛑 Now just like useState and useEffect we get 2 things inside addTodo function (state, action), we will have access to both here always
-        // State here gives us access to all the default values present already inside the initialState
+        // State here gives us access to all the default and updated values present already inside the store
         // As for action, we get those values from it which we want to use in a funciton, say to remove a todo, a need an ID, this ID, we will get it from action.
         // Jo data pass ho raha hai, wo milta hai action mein
 
@@ -60,6 +60,7 @@ export const todoSlice = createSlice({
                 id: nanoid(), 
                 text: action.payload
                 // Here inside action, payload is an object from which we will extract texts, like we did this here
+                // See Redux Devtools in Chrome by doing Inspect -> Redux (click on >> icon)
 
                 // Now we have made a todo, now to update the state
 
