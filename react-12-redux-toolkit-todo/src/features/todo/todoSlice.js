@@ -83,9 +83,7 @@ export const todoSlice = createSlice({
             // to update a new todo we will first create an object of action.payload having the todo id and a new updated text called new text
             // We will now map this todos, using map function, if we find a todo whose id matches with the one to update, we will update it, else we pass the todos as they are
             const {id, newText} = action.payload
-            const updatedTodo = state.todos.map((todo) => todo.id === id ? {...todo, text: newText} : todo);
-
-            state.todos = updatedTodo;
+            state.todos = state.todos.map((todo) => todo.id === id ? {...todo, text: newText} : todo);
         }
 
 
