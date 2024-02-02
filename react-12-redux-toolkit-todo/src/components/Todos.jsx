@@ -50,10 +50,12 @@ function Todos() {
           {/* Let us now do mapping (looping) for one todo to get multiple todos (the same number as the one we add) */}
           {todos.map((todo) => (
             <li 
-            className="mt-4 flex justify-around flex-wrap items-center bg-zinc-800 px-4 py-2 rounded"
+            className="mt-4 flex justify-between flex-wrap items-center bg-zinc-800 px-4 py-2 rounded"
             // Mapping by key
             key={todo.id}
             >
+              <div></div> 
+              {/* Added this just to bring text at center and use justify between at main div */}
 
               {/* Now we manage the update text functionality */}
               <div className='flex items-center'>
