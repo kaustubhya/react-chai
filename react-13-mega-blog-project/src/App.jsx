@@ -1,33 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// 1. go to notes.md
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Accessing the environment variables
+ // console.log(process.env.REACT_APP_APPWRITE_URL);
+  // Now after doing this, i.e. making any changes in the environment variable file, you need to reload the window and do npm run dev again
+  // but this was the step when you made any app using create react app
+
+  // Vite:
+  console.log(import.meta.env.VITE_APPWRITE_URL);
+  // We donot usually use this approach as sometimes when we run an app, the env does not load properly due to which our app crashes, for that, we do this same step above in an efficient production ready way.
+  // 4. Go to config.js for this
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Blog With Appwrite</h1>
     </>
   )
 }
