@@ -5,9 +5,13 @@
 
 # For Vite:
 VITE_APPWRITE_URL = "enter url from appwrite website"
+
 VITE_APPWRITE_PROJECT_ID = "enter key from appwrite website"
+
 VITE_APPWRITE_DATABASE_ID="enter key from appwrite website"
+
 VITE_APPWRITE_COLLECTION_ID="enter key from appwrite website"
+
 VITE_APPWRITE_BUCKET_ID="enter key from appwrite website"
 
 # While it is not important to write all this in capital but we can easily spot them so, please do write them in uppercase
