@@ -15,3 +15,5 @@ const config = {
 }
 
 export default config
+// Now we will make a folder called Appwrite where we do all the work regarding Appwrite
+// 5. Go to Appwrite folder for this and go to auth_service.js
