@@ -150,3 +150,5 @@ const authServiceObj = new AuthService();
 export default AuthService
 
 // 🛑🛑🛑 THIS FILE CODE IS THE FULL AUTH SERVICE FOR APPWRITE, SAVE FOR FUTURE
+
+// 6. Now go to configuration.js
