@@ -147,7 +147,7 @@ const authServiceObj = new AuthService();
 // Now we have made the object and included all functionalities in it, just now use .login, .logout, .getCurrentUser etc. when you import this class object
 // Also in future if we change our backend service, say firebase we will see changes in this file only and will not have to make changes everywhere else
 
-export default AuthService
+export default authServiceObj
 
 // 🛑🛑🛑 THIS FILE CODE IS THE FULL AUTH SERVICE FOR APPWRITE, SAVE FOR FUTURE
 

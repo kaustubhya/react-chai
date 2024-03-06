@@ -302,3 +302,5 @@ export default service
 
 // now since we made the service using "new" then make the constructor here too (it is mandatory here)
 // Go to export class Service{} now (top ↑ 🆙)
+
+// 7. After this is done, go to store / store.js
