@@ -1,4 +1,5 @@
-import React from 'react'
+// eslint-disable-next-line no-unused-vars
+import React from "react"
 
 // Container accepts our properties as a children.
 // Container is like a box, where we define its height and width and majorly use it for styling.

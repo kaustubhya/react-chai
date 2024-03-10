@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '../Logo'
 import { Link } from 'react-router-dom'
 
@@ -157,4 +156,4 @@ function Footer() {
 
 export default Footer
 
-// 🛑🛑 Just go to Logo.jsx to enter the code there
+// 14. 🛑🛑 Just go to Logo.jsx to enter the code there

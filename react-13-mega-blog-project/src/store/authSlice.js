@@ -30,7 +30,7 @@ const authSlice = createSlice({
 
 
         // 🛑🛑🛑🛑 reducer functions AKA "🛑Actions"
-        login: () => { 
+        login: (state, action) => { 
             state.status = true;
             // this will connect us to initial state where its state value is updated from false to true
 
@@ -45,7 +45,7 @@ const authSlice = createSlice({
             // No need to spread values in redux toolkit, it is already been taken care of by redux
         },
 
-        logout: (state, action) => {
+        logout: (state) => {
             // action is not needed here
 
             state.status = false;
@@ -77,6 +77,8 @@ export default authSlice.reducer;
 // 9. Make a new folder components, there make 2 more folders: Header and Footer
 // Inside each folder, make Header.jsx and Footer.jsx respectively and do rfce() in each of them.
 // Then go to index.js to export everything together
+
+
 
 
 
