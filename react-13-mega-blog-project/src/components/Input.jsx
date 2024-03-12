@@ -9,6 +9,8 @@ import React, {useId} from 'react'
 
 const Input = React.forwardRef(function Input({
 
+    // giving props
+
     label,
     type = "text",
     className = "",
@@ -49,3 +51,6 @@ const Input = React.forwardRef(function Input({
 })
 
 export default Input
+
+// 21. 🛑 Go to Select.jsx now
+
