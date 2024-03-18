@@ -131,9 +131,10 @@ const Login = () => {
               {...register("password", {
                 required: true,
                 validate: {
-                  matchPattern: (value) => /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/.test(value) || "Enter a valid password!!",
+                  matchPattern: (value) => /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/.test(value) || "Enter a valid password - Password should be between 8 to 64 chars, should have one numeric, one special char and has both upper and lower case chars",
                 }
               })}
+              // Resource: https://regexr.com/38tvj
 
             />
 
@@ -154,4 +155,6 @@ const Login = () => {
 }
 
 export default Login
+
+// 24. 🛑 Go to SignUp.jsx now
 
