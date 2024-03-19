@@ -89,9 +89,9 @@ export class Service{
 
            /* So, async updatePost({title, slug, content, featuredImage, status, userId}) { ❌
                 async updatePost(slug, {title, content, featuredImage, status}) { ✅ 
-                // This will help us uniquely identify the document
-                // Also we are not including userId here because we donot want to change or update the userId while updating the document.
-                // We are giving edit document option to only that user who has created the document (this is our choice of designing the functionality)
+                This will help us uniquely identify the document
+                Also we are not including userId here because we donot want to change or update the userId while updating the document.
+                We are giving edit document option to only that user who has created the document (this is our choice of designing the functionality)
             */
 
                 try {

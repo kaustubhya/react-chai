@@ -41,3 +41,4 @@ export default Protected = ({children, authentication = true}) => {
 //   conditional rendering
 }
 
+// 26. 🛑🛑 Go to RTE.jsx
