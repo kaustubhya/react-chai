@@ -9,7 +9,12 @@ import Button from "./Button";
 import Input from "./Input";
 import RTE from "./RTE";
 import Select from "./Select";
+import Signup from "./SignUp";
+import Login from './Login'
+import PostForm from './post-form/PostForm'
+import PostCards from './PostCards.jsx'
 
+import AuthLayout from './AuthLayout.jsx'
 // Export them together as an object
 
 export {
@@ -26,6 +31,13 @@ export {
     // after adding and importing RTE
     RTE,
     Select,
+
+    // In pages building
+    Signup,
+    Login,
+    PostForm,
+    PostCards,
+    AuthLayout
 }
 
 // 10. Now go to App.jsx
