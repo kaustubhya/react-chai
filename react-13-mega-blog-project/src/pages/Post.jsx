@@ -89,3 +89,5 @@ const Post = () => {
 }
 
 export default Post
+
+// 35. 🛑 Now we add routing, for that, go to src/main.jsx

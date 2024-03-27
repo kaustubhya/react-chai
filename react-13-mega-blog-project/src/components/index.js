@@ -15,6 +15,9 @@ import PostForm from './post-form/PostForm'
 import PostCards from './PostCards.jsx'
 
 import AuthLayout from './AuthLayout.jsx'
+// We can call it either AuthLayout or protected, whatever we want. Both are same.
+
+
 // Export them together as an object
 
 export {
